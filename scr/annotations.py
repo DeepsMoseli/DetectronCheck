@@ -44,7 +44,6 @@ def annotations_file(jsonfile):
 
 
 annotations = annotations_file(anno_file)
-
 with open( "check_box_annotations_48.pickle" , 'wb') as file:
     pickle.dump(annotations,file, protocol=pickle.HIGHEST_PROTOCOL)
     file.close()
