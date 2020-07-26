@@ -5,34 +5,43 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     </head>
     <body text-align = "center">
         <div class="ui inverted container">
             <div class="ui inverted borderless menu topmenu">
-                <h1 class="ui blue inverted header"><a class="ui item" href="/">WRINDLE</a></h1>
+                <h1 class="ui blue inverted header"><a class="ui item" href="/">CheckNet</a></h1>
             </div>
         </div>
         <div class="ui hidden divider"></div>
-        <div class="ui hidden divider"></div>
+
         <div class="ui center aligned container">
-            <h1 class="ui header">Predicted class
-                <h4 class="ui blue header"> {{ class_name }}</h4>
-            </h1>
-            <h2 class="ui header" >Confidence
-                <h4 class="ui header" > {{ probability }}</h4>
-            </h2>
-            <h2 class="ui header" >Ground truth
-                <h4 class="ui green header"> {{ real }}</h4>
-            </h2>
-            <button class="massive ui green button">
-                <a class="ui  item" href="/">Next prediction</a>
-            </button>
-        </div>
-        <div class="ui container">
-            <h3 class = "ui hidden divider">
-                Predictions on image
-            </h3>
-            <img class ="ui rounded fluid image" src="{{ prediction_image }}" alt = 'Predictions on image'>
+        <div class="ui hidden divider"></div>
+            <div class="ui center aligned padded centered grid">
+
+                <button class="ui orange labeled icon button">
+                    <i class="arrow circle left icon"></i>
+                    <a class="ui item" href="/">LOAD NEW</>
+                </button>
+
+                <button class="ui toggle active labeled icon button">
+                    <i class="download icon"></i>
+                    CSV RESULTS
+                </button>
+            </div>
+            <div class="ui raised segment">
+                <div class="ui equal width center aligned centered grid">
+                   <div class="ui green four wide centered column">
+                     {% for table in tables %}
+                        {{titles[loop.index]}}
+                        {{ table|safe }}
+                     {% endfor %}
+                   </div>
+                   <div class="twelve wide column">
+                     <img class ="ui rounded fluid image" src="{{ prediction_image }}" alt = 'Predictions on image'>
+                   </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
