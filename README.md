@@ -37,5 +37,9 @@ python app.py
 
 If everything is installed and matches versions you should be able to open the app in your browser localhost:5000
 
+Once its open,  you will choose a pdf file and click upload. then it wil give a prediction and a csv file will be downloaded into the _DetectronCheck/scr/static/csv_results/_  folder.
+
+* Everything else from here is building around the model and making it scale with good front and backend.
 -----
+
 
