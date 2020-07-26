@@ -1,0 +1,12 @@
+th:tr{ 
+        color: blue; 
+  
+    } 
+tr:nth-of-type(2n){ 
+    border: 1px solid olive; 
+  } 
+  
+td{ 
+   padding: 4px 4px; 
+   border: 1px solid olive 
+} 
