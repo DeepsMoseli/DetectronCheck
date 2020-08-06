@@ -90,4 +90,3 @@ class trained_model:
         del v_frame['v1'],v_frame['v2'], v_frame['v3'], v_frame['v4']
         #v_frame2 =v_frame[['classes','scores']].to_dict(orient='list')
         return v_frame
-
