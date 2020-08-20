@@ -11,6 +11,10 @@ OS: Linux distro (ubuntu or mint will do)
 ```bash
 >> bash Anaconda3-2020.07-Linux-x86_64.sh
 ```
+* To update anaconda:
+```bash
+>> conda update -n env conda
+```
 * install the following dependencies by running these commands in your terminal:
 ```bash
 >> pip install pyyaml==5.1 pycocotools>=2.0.1
