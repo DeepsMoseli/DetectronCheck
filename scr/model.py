@@ -12,12 +12,10 @@ import pandas as pd
 import os
 import sys
 from matplotlib import pyplot as plt
-
 import cv2
 from PIL import Image
 from skimage import measure
 import sklearn
-
 import pycocotools as pycoco
 import detectron2
 from detectron2.utils.logger import setup_logger
